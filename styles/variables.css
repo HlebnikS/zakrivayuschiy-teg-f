@@ -1,1 +1,26 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --fonts-Inter: "Inter";
+  --fonts-PressStart2P: "PressStart2P";
+
+  --weight-h2: 715;
+  --weight-p: 410;
+
+  --border-default: 2px solid #000;
+
+  --width-img: clamp(23.1875rem, -0.25rem + 100vw, 43.5rem);
+  --height-img: clamp(23.1875rem, -0.25rem + 100vw, 43.5rem);
+
+  --padding-text-block: clamp(0.25rem, 0.25rem + 0vw, 0.25rem);
+  --padding-text-inline: clamp(0.625rem, 0.625rem + 0vw, 0.625rem);
+  --block-width: clamp(23.4375rem, 0rem + 100vw, 43.75rem);
+  --size-h2: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  --body-pattern:
+    repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
+    repeating-linear-gradient(180deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
+    linear-gradient(180deg, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
+
+  --color-bg: #fff;
+  --color-border: #000;
+  --color-shadow: #fff;
+}
