@@ -23,4 +23,10 @@
   --color-bg: #fff;
   --color-border: #000;
   --color-shadow: #fff;
+  --color-focus: #000;
+  --color-text: #fff;
+
+  --color-contour: black;
+  --animation-fill-color: red;
+  --color-sparks: #ff0000;
 }
