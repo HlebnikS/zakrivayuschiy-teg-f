@@ -33,13 +33,13 @@
   border: var(--border-default);
 }
 .header__title {
-  font-family: var(--fonts-PressStart2P), cursive;
+  font-family: var(--fonts-PressStart2P), fantasy;
   font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
   text-transform: uppercase;
 }
 
 .header__text {
-  font-family: var(--fonts-PressStart2P), cursive;
+  font-family: var(--fonts-PressStart2P), fantasy;
   font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
   text-transform: uppercase;
 }
@@ -60,8 +60,8 @@
 }
 
 .card__title {
-  font-feature-settings: "wght" var(--weight-h2);
-  font-variation-settings: "wght" var(--weight-h2);
+  font-feature-settings: "wght" var(--weight-title);
+  font-variation-settings: "wght" var(--weight-title);
   font-size: var(--size-h2);
   padding-block: var(--padding-text-block);
   padding-inline: var(--padding-text-inline);
@@ -88,7 +88,7 @@
   right: 25px;
   font-size: 14px;
   text-transform: uppercase;
-  font-family: var(--fonts-PressStart2P), cursive;
+  font-family: var(--fonts-PressStart2P), fantasy;
   mix-blend-mode: hard-light;
   text-shadow:
     -1px 0 var(--color-shadow),
@@ -113,8 +113,8 @@
 }
 
 .card__paragraph-text {
-  font-feature-settings: "wght" var(--weight-p);
-  font-variation-settings: "wght" var(--weight-p);
+  font-feature-settings: "wght" var(--weight-text);
+  font-variation-settings: "wght" var(--weight-text);
   font-size: 18px;
   line-height: 117%;
 }
@@ -153,14 +153,12 @@ button {
 }
 
 .card__like-button {
-  border: var(--border-default);
   padding-block: 10.5px;
   min-width: 130px;
-  cursor: pointer;
 }
 
 .button__text {
-  font-family: var(--fonts-PressStart2P), cursive;
+  font-family: var(--fonts-PressStart2P), fantasy;
   font-size: 14px;
   line-height: 90%;
   display: block;
@@ -171,20 +169,16 @@ button {
   justify-content: center;
 }
 
-.button__save {
-  font-family: var(--fonts-PressStart2P), cursive;
+.button_type_save {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-bg);
-  border: var(--border-default);
   padding: 15px 18px;
   width: clamp(19.125rem, 17.0337rem + 8.9231vw, 20.9375rem);
   margin-top: 50px;
   margin-bottom: 100px;
   gap: 8px;
-  cursor: pointer;
 }
 
 .icon {
@@ -227,12 +221,11 @@ button {
 .dialog {
   padding: 30px 40px;
   width: 341px;
-  height: 191px;
 }
 
 .dialog__block {
   display: grid;
-  gap: 30px;
+  gap: 27px;
 }
 
 .dialog__block-svg {
@@ -246,32 +239,34 @@ dialog::backdrop {
 }
 
 .dialog__text {
-  font-family: var(--fonts-PressStart2P), cursive;
+  font-family: var(--fonts-PressStart2P), fantasy;
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
 }
 
-.button__ok {
-  border: var(--border-default);
+.popup__close-button {
   padding: 9px 17px;
   width: 261px;
-  height: 38px;
-  cursor: pointer;
 }
 
-.button__focus {
-  box-shadow: 0 0 0 transparent;
-  transition: box-shadow 0.3s ease;
+.button {
   position: relative;
   overflow: hidden;
+  border: var(--border-default);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  background-color: var(--color-bg);
+  font-family: var(--fonts-PressStart2P), fantasy;
+  font-size: 14px;
+  box-shadow: 0 0 0 transparent;
 }
 
-.button__focus:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px 0 var(--color-focus);
 }
 
-.button__focus::before {
+.button::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -281,18 +276,14 @@ dialog::backdrop {
   transition: 0.5s ease-in-out;
 }
 
-.button__focus:hover::before {
+.button:hover::before {
   transform: translateX(0);
 }
 
-.button__focus span {
+.button span,
+.button .icon {
   position: relative;
   z-index: 1;
-  color: var(--color-text);
-  mix-blend-mode: difference;
-}
-
-.button__focus .icon {
   color: var(--color-text);
   mix-blend-mode: difference;
 }
@@ -365,7 +356,7 @@ dialog::backdrop {
     width: 21px;
   }
 
-  .button__save {
+  .button_type_save {
     flex-direction: row;
   }
 }
